@@ -1,0 +1,4 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://121.5.154.71:3306/HanGouT?useUnicode=true&characterEncoding=utf-8
+username=root
+password=rootHGT@5
