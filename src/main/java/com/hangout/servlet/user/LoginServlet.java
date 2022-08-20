@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
         //得到context
         ServletContext servletContext = this.getServletContext();
         String sessionId = RandomStringUtils.randomAlphanumeric(25);
-        servletContext.setAttribute("sessionId", new Identifier(openid,session_key));
+        servletContext.setAttribute(sessionId, new Identifier(openid,session_key));
 
         // 5.返回sessionId
         Writer out = resp.getWriter();

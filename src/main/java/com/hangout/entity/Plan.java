@@ -1,12 +1,14 @@
 package com.hangout.entity;
 
 
+import java.sql.Date;
+
 public class Plan {
 
   private long id;//id
-  private java.sql.Date date;//日程日期
+  private Date date;//日程日期
   private String time;//日程时段
-  private long journeyId;//对应行程id
+  private long teamId;//对应行程id
   private String content;//行程内容
   private String photo;//合照
 
@@ -38,12 +40,12 @@ public class Plan {
   }
 
 
-  public long getJourneyId() {
-    return journeyId;
+  public long getTeamId() {
+    return teamId;
   }
 
-  public void setJourneyId(long journeyId) {
-    this.journeyId = journeyId;
+  public void setTeamId(long teamId) {
+    this.teamId = teamId;
   }
 
 

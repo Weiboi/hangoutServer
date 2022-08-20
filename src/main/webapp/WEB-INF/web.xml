@@ -6,6 +6,20 @@
             version="4.0"
             metadata-complete="true">
 
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Servlet4Push</web-resource-name>
+            <url-pattern>/*</url-pattern>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+
+    </security-constraint>
+
+
     <!--设置Session默认的失效时间-->
     <session-config>
         <!--7天后Session自动失效，以分钟为单位-->
@@ -32,11 +46,101 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PlanServlet</servlet-name>
-        <servlet-class>com.hangout.servlet.user.PlanServlet</servlet-class>
+        <servlet-name>PlanContentServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.plan.PlanContentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PlanServlet</servlet-name>
-        <url-pattern>/plan</url-pattern>
+        <servlet-name>PlanContentServlet</servlet-name>
+        <url-pattern>/plan/content</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PlanPhotoServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.plan.PlanPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlanPhotoServlet</servlet-name>
+        <url-pattern>/plan/photo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WhisperSendServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.whisper.WhisperSendServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WhisperSendServlet</servlet-name>
+        <url-pattern>/whisper/send</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WhisperReceiveServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.whisper.WhisperReceiveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WhisperReceiveServlet</servlet-name>
+        <url-pattern>/whisper/receive</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TeamCreateServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.team.TeamCreateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeamCreateServlet</servlet-name>
+        <url-pattern>/team/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WishAddServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.wish.WishAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WishAddServlet</servlet-name>
+        <url-pattern>/wish/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WishDropServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.wish.WishDropServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WishDropServlet</servlet-name>
+        <url-pattern>/wish/drop</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WishFindServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.wish.WishFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WishFindServlet</servlet-name>
+        <url-pattern>/wish/find</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WishModifyServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.wish.WishModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WishModifyServlet</servlet-name>
+        <url-pattern>/wish/modify</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LabourFindServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.labour.LabourFindServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LabourFindServlet</servlet-name>
+        <url-pattern>/labour/find</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LabourUpdateServlet</servlet-name>
+        <servlet-class>com.hangout.servlet.labour.LabourUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LabourUpdateServlet</servlet-name>
+        <url-pattern>/labour/update</url-pattern>
     </servlet-mapping>
 </web-app>

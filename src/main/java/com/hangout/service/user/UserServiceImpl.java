@@ -32,4 +32,13 @@ public class UserServiceImpl implements UserService{
         }
     }
 
+    public String getUserName(String openid) {
+        User user = null;
+        try {
+            user = userDao.getLoginUser(openid);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return user.getNickname();
+    }
 }

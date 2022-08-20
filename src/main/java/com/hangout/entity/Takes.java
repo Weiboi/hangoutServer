@@ -3,35 +3,40 @@ package com.hangout.entity;
 
 public class Takes {
 
-  private long id;//id
-  private long userId;//用户id
-  private long teamId;//队伍id
+  private int id;//id
+  private String userId;//用户id
+  private int teamId;//队伍id
+  private String labour;//分工
 
-
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-
-  public long getUserId() {
+  public String getUserId() {
     return userId;
   }
 
-  public void setUserId(long userId) {
+  public void setUserId(String userId) {
     this.userId = userId;
   }
 
-
-  public long getTeamId() {
+  public int getTeamId() {
     return teamId;
   }
 
-  public void setTeamId(long teamId) {
+  public void setTeamId(int teamId) {
     this.teamId = teamId;
   }
 
+  public String getLabour() {
+    return labour;
+  }
+
+  public void setLabour(String labour) {
+    this.labour = labour;
+  }
 }

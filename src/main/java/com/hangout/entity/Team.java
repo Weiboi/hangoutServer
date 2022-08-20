@@ -3,35 +3,48 @@ package com.hangout.entity;
 
 public class Team {
 
-  private long id;//id
-  private long leaderId;//队长id
-  private long journeyId;//对应行程id
+  private int id;//id
+  private String name;//行程名
+  private String destination;//目标地
+  private String leaderId;//队长Id
 
+  public Team() {
+  }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
 
-  public long getLeaderId() {
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public String getDestination() {
+    return destination;
+  }
+
+  public void setDestination(String destination) {
+    this.destination = destination;
+  }
+
+
+  public String getLeaderId() {
     return leaderId;
   }
 
-  public void setLeaderId(long leaderId) {
+  public void setLeaderId(String leaderId) {
     this.leaderId = leaderId;
   }
-
-
-  public long getJourneyId() {
-    return journeyId;
-  }
-
-  public void setJourneyId(long journeyId) {
-    this.journeyId = journeyId;
-  }
-
 }
+
+
